@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imagePhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/dummy_photos"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/pixel_google" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#4D000000"
+            android:drawableStart="@drawable/ic_collections_white_18dp"
+            android:drawablePadding="4dp"
+            android:elevation="2dp"
+            android:padding="8dp"
+            android:text="@string/dummy_photos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imagePhone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imagePhone"
+            app:layout_constraintVertical_bias="1"
+            app:layout_editor_absoluteX="16dp"
+            app:layout_editor_absoluteY="193dp" />
+
+        <TextView
+            android:id="@+id/textPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/dummy_value"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textStock"
+            app:layout_constraintTop_toBottomOf="@+id/imagePhone"
+            app:layout_editor_absoluteX="0dp"
+            app:layout_editor_absoluteY="273dp" />
+
+        <TextView
+            android:id="@+id/textStock"
+            android:layout_width="match_parent"
+            android:layout_height="21dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/stock"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textDescription"
+            app:layout_constraintTop_toBottomOf="@+id/textPrice"
+            app:layout_editor_absoluteY="349dp" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:lineSpacingMultiplier="1"
+            android:text="@string/content_text"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textStock"
+            app:layout_editor_absoluteX="0dp"
+            app:layout_editor_absoluteY="429dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="460dp" />
+
+        <include
+            layout="@layout/layout_specification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
